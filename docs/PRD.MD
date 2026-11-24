@@ -669,14 +669,6 @@ Fitur:
 - Status booking.
 - Status pesanan.
 
-Admin dapat mengekspor laporan dalam format:
-- PDF.
-- Excel.
-
-Library yang direkomendasikan:
-- DomPDF untuk PDF.
-- PhpSpreadsheet untuk Excel.
-
 Pendapatan laporan dihitung berdasarkan transaksi yang sudah dibayar.
 
 ## 5.18 Pengaturan Informasi Cafe
@@ -1228,8 +1220,6 @@ Produk dianggap memenuhi kebutuhan MVP apabila:
 ## Prioritas 3 — Pelaporan dan Administrasi
 
 - Laporan transaksi.
-- Export PDF.
-- Export Excel.
 - Grafik transaksi.
 - Backup database.
 - Pengujian keamanan dan validasi.

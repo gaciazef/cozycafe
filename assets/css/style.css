@@ -1,0 +1,232 @@
+:root {
+    --coffee: #6f4e37;
+    --coffee-dark: #4a3222;
+    --cream: #faf6f0;
+    --off-white: #fffdf8;
+    --text: #2f2925;
+    --border: #e8dfd4;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+    background: var(--off-white);
+}
+
+body:has(.admin-main) {
+    overflow-x: hidden;
+}
+
+body:has(.admin-main) .admin-main {
+    flex: 1 0 auto;
+}
+
+body:has(.admin-main) .admin-footer {
+    margin-top: auto;
+}
+
+.admin-main .table-responsive {
+    max-width: 100%;
+}
+
+.admin-main .card,
+.admin-main .table {
+    max-width: 100%;
+}
+
+.navbar-cozy {
+    background: rgba(255, 253, 248, 0.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--coffee-dark) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--coffee) !important;
+}
+
+.btn-coffee {
+    color: #fff;
+    background: var(--coffee);
+    border-color: var(--coffee);
+}
+
+.btn-coffee:hover,
+.btn-coffee:focus {
+    color: #fff;
+    background: var(--coffee-dark);
+    border-color: var(--coffee-dark);
+}
+
+.btn-outline-coffee {
+    color: var(--coffee);
+    border-color: var(--coffee);
+}
+
+.btn-outline-coffee:hover,
+.btn-outline-coffee:focus {
+    color: #fff;
+    background: var(--coffee);
+    border-color: var(--coffee);
+}
+
+.hero-panel {
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        linear-gradient(rgba(250, 246, 240, 0.92), rgba(250, 246, 240, 0.92)),
+        var(--cream);
+    border: 1px solid var(--border);
+}
+
+.cafe-logo {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+}
+
+.menu-card {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.menu-image {
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    background: var(--cream);
+}
+
+.menu-image-placeholder {
+    border-bottom: 1px solid var(--border);
+}
+
+.text-coffee {
+    color: var(--coffee-dark);
+}
+
+.cafe-info-section {
+    background: var(--cream);
+}
+
+.sticky-summary {
+    position: sticky;
+    top: 90px;
+}
+
+.table-card {
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.table-card:hover {
+    border-color: var(--coffee) !important;
+    transform: translateY(-2px);
+}
+
+.notification-unread {
+    border-left: 4px solid var(--coffee) !important;
+}
+
+.eyebrow {
+    color: var(--coffee);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.site-footer,
+.admin-footer {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+}
+
+.admin-footer {
+    width: 100%;
+}
+
+.admin-topbar {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1035;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-sidebar {
+    width: 260px;
+    max-width: 85vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: var(--cream);
+    border-right: 1px solid var(--border);
+}
+
+.admin-sidebar .nav-link {
+    border-radius: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.admin-sidebar .nav-link:hover {
+    background: #fff;
+}
+
+@media (min-width: 992px) {
+    .admin-sidebar {
+        position: fixed;
+        left: 0;
+        top: 64px;
+        bottom: 0;
+        height: calc(100vh - 64px);
+        visibility: visible !important;
+        transform: none !important;
+        z-index: 1020;
+    }
+
+    .admin-main {
+        margin-left: 260px;
+        width: calc(100% - 260px);
+        max-width: 1600px;
+        overflow-x: hidden;
+    }
+
+    .admin-footer {
+        width: calc(100% - 260px);
+        margin-left: 260px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .admin-main {
+        padding-left: 1.25rem !important;
+        padding-right: 1.25rem !important;
+    }
+
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-panel {
+        min-height: 360px;
+        padding: 2rem 1.25rem !important;
+    }
+
+    .navbar-cozy .navbar-collapse {
+        padding: 0.75rem 0;
+    }
+}

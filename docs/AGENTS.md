@@ -244,7 +244,7 @@ Jalankan prompt di bawah ini secara berurutan. Pastikan setiap step diverifikasi
 
 ---
 
-### STEP 9: Modul Laporan Transaksi (PDF & Excel), Backup Database SQL, & Pengujian
+### STEP 9: Modul Laporan Transaksi, Backup Database SQL, & Pengujian
 
 **Prompt untuk Agent:**
 > Implementasikan fitur Prioritas 3 sesuai Bagian 5.17, 5.19, dan Acceptance Criteria pada `PRD.MD`:
@@ -253,8 +253,6 @@ Jalankan prompt di bawah ini secara berurutan. Pastikan setiap step diverifikasi
 >    - Filter berdasarkan `tanggal_mulai` dan `tanggal_akhir` (default bulan berjalan).
 >    - Tampilkan ringkasan Total Transaksi dan **Total Pendapatan** (dihitung dari transaksi yang berstatus `Sudah Dibayar`).
 >    - Tabel detail transaksi lengkap (Kode Transaksi, Tanggal, Pelanggan, Meja, Total, Status Pembayaran, Status Booking, Status Pesanan).
->    - **Export PDF (DomPDF):** Desain template HTML bersih berbahasa Indonesia berisi kop cafe, periode filter, ringkasan, dan tabel transaksi. Download langsung sebagai `laporan-cozycafe-YYYYMMDD.pdf`.
->    - **Export Excel (PhpSpreadsheet):** Generate file `.xlsx` terformat rapi (header tebal, format angka Rupiah, auto-width kolom) dan download langsung sebagai `laporan-cozycafe-YYYYMMDD.xlsx`.
 > 2. **Backup Database Manual (`views/admin/backup.php`):**
 >    - Buat halaman Backup Database dengan tombol **Download Backup Database (.sql)**.
 >    - **PENTING:** Implementasikan generator dump SQL menggunakan **Pure PHP PDO** (membaca `SHOW TABLES`, `SHOW CREATE TABLE`, dan `SELECT *` untuk menghasilkan `INSERT INTO` statements yang valid dalam satu transaction/foreign_key_checks=0). Jangan hanya mengandalkan `exec('mysqldump')` agar fitur ini **100% berfungsi** baik di Windows XAMPP maupun di dalam container Docker/Dokploy yang tidak memiliki binary `mysqldump`.
