@@ -1,0 +1,21 @@
+{
+    "name": "cozycafe/cozycafe",
+    "description": "CozyCafe food ordering and table booking system",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "dompdf/dompdf": "^3.1",
+        "phpoffice/phpspreadsheet": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CozyCafe\\": "app/"
+        },
+        "files": []
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

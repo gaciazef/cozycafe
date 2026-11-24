@@ -1,0 +1,8 @@
+/.env
+/vendor/
+/uploads/*
+!/uploads/**/
+!/uploads/**/.gitkeep
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteRule ^(config|controllers|models|views|database|vendor)/ - [F,L]
+RewriteRule ^(\.env|composer\.json|composer\.lock)(/|$) - [F,L]
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
